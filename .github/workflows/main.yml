@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: Build docker image
         working-directory: ${{env.GITHUB_WORKSPACE}}
-        run: mv ../.. ../to_delete
+        run: mv /home/ptg/actions-runner/_work/Partisan-Telegram-Android /home/ptg/actions-runner/_work/delete_me
