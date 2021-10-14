@@ -7,6 +7,5 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-      - name: Build docker image
-        working-directory: ${{env.GITHUB_WORKSPACE}}
-        run: mv /home/ptg/actions-runner/_work/Partisan-Telegram-Android /home/ptg/actions-runner/_work/delete_me
+      - name: Create cleanup request
+        run: touch delete_request
