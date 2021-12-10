@@ -1,4 +1,4 @@
-name: Create Release
+name: Clear Build Folder
 
 on:
   workflow_dispatch:
