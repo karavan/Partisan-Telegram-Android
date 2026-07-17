@@ -1786,7 +1786,7 @@ public class RichEditor extends BaseFragment implements NotificationCenter.Notif
             listView.addBlock(map);
             chatAttachAlert.dismiss(true);
         });
-        chatAttachAlert.setAudioSelectDelegate((audios, caption, notify, scheduleDate, scheduleRepeatPeriod, effectId, invertMedia, payStars) -> {
+        chatAttachAlert.setAudioSelectDelegate((audios, caption, notify, scheduleDate, scheduleRepeatPeriod, effectId, invertMedia, payStars, autoDeleteDelay) -> {
             if (audios != null && !audios.isEmpty()) {
                 listView.attachAudio(audios.get(0));
             }

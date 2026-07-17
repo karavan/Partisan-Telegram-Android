@@ -30318,7 +30318,7 @@ public class ChatActivity extends BaseFragment implements
         }
 
         CharSequence[] message = new CharSequence[]{ignoreDraft ? null : draftMessage};
-        ArrayList<TLRPC.MessageEntity> entities = getMediaDataController().getEntities(message, !isEncryptedChat() || allCurrentEncryptedChatMatch(currentEncryptedChat -> AndroidUtilities.getPeerLayerVersion(currentEncryptedChat.layer) >= 101, false));
+        ArrayList<TLRPC.MessageEntity> entities = getMediaDataController().getEntities(message, !isEncryptedChat() || allCurrentEncryptedChatMatch(currentEncryptedChat -> AndroidUtilities.getPeerLayerVersion(currentEncryptedChat.layer) >= 101), false);
         long draftThreadId = computeDraftThreadId(replyMessage);
         TLRPC.DraftMessage existingDraft = getMediaDataController().getDraft(dialog_id, draftThreadId);
         TL_iv.RichMessage richMessage = existingDraft != null ? existingDraft.rich_message : null;

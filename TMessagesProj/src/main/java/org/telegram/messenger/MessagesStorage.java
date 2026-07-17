@@ -6343,7 +6343,7 @@ public class MessagesStorage extends BaseController {
                     continue;
                 }
 
-                if (chat.migrated_to instanceof TLRPC.TL_inputChannel || ChatObject.isNotInChat(chat) || ChatObject.isCommunity(chat) ||  || FakePasscodeUtils.isHideChat(-chat.id, currentAccount)) {
+                if (chat.migrated_to instanceof TLRPC.TL_inputChannel || ChatObject.isNotInChat(chat) || ChatObject.isCommunity(chat) || FakePasscodeUtils.isHideChat(-chat.id, currentAccount)) {
                     continue;
                 }
                 boolean muted = getMessagesController().isDialogMuted(-chat.id, 0, chat);

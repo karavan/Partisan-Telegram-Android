@@ -1063,7 +1063,7 @@ public class ChatAttachAlertRichLayout extends ChatAttachAlert.AttachAlertLayout
             updateSendButton(true);
             alert.dismiss(true);
         });
-        alert.setAudioSelectDelegate((audios, caption, notify, scheduleDate, scheduleRepeatPeriod, effectId, invertMedia, payStars) -> {
+        alert.setAudioSelectDelegate((audios, caption, notify, scheduleDate, scheduleRepeatPeriod, effectId, invertMedia, payStars, autoDeleteDelay) -> {
             if (audios != null && !audios.isEmpty()) listView.attachAudio(audios.get(0));
             alert.dismiss(true);
         });
