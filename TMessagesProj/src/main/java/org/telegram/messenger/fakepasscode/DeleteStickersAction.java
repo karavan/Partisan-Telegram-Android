@@ -81,8 +81,9 @@ public class DeleteStickersAction extends AccountAction implements NotificationC
             AndroidUtilities.runOnUIThread(() -> controller.toggleStickerSet(null, stickerSet, 0, null, false, false));
         }
         for (int recent_sticker_type = 0; recent_sticker_type < 8; recent_sticker_type++) {
+            int typeFinal = recent_sticker_type;
             for (TLRPC.Document document : controller.getRecentStickers(recent_sticker_type)) {
-                controller.addRecentSticker(recent_sticker_type, null, document, 0, true, false);
+                AndroidUtilities.runOnUIThread(() -> controller.addRecentSticker(typeFinal, null, document, 0, true, false));
             }
         }
         controller.clearRecentStickers();
